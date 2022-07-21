@@ -1,0 +1,42 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--subtitle-txt);
+        }
+    
+    &__item {
+        display: block;
+        text-align: left;
+        max-width: 270px;
+        }
+
+    &n__item:not(:first-child) {
+        margin-left: 30px;
+    }
+
+    &__item .text {
+        color: var(--primary-txt-color);
+    }   
+}
+
+.section__list {
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+.section__item+.section__item {
+        margin-right: 0;
+    }
+}
+
+
+
+

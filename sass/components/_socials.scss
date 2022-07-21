@@ -1,0 +1,62 @@
+/* посилання на соцмережі */
+.social-media-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-media-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: #AFB1B8;
+    /* background-color: #fff; */
+    border-radius: 50%;
+
+    transition-property: color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-txt-color);
+        color: #FFFFFF;
+    
+        }
+}
+
+.social-media-icon {
+    fill: currentColor;
+}
+
+.social-media-icon-footer {
+    fill: #FFFFFF;
+
+}
+
+
+.social-media-link-visit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--bcg-color);
+
+    border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
+
+}
+
+.social-media-link-visit:hover,
+.social-media-link-visit:focus {
+    background-color: var(--accent-txt-color);
+}

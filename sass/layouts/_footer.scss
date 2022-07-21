@@ -1,0 +1,15 @@
+/* Footer */
+.footer {
+    padding: 60px 0;
+    background-color: var(--hero-bcg);
+
+    &__flex {
+            display: flex;
+            align-items: baseline;
+        }
+
+    .logo {
+            color: var(--bcg-color);
+}
+}
+
