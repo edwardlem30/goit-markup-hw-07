@@ -1,3 +1,12 @@
+// @import "./decimals";
+
+// @mixin fonts($fw, $fs, $lh, $ls: 0.03em) {$line-height: $lh/$fs;
+//     font-weight: $fw;
+//     font-size: $fs;
+//     line-height: decimal-round($line-height);
+// }
+
+
 @mixin button {
     position: absolute;
     left: 44%;

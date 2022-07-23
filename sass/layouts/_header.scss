@@ -14,7 +14,7 @@
     }
 }
 
-.header-link {
+.header__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -39,7 +39,7 @@
     }
 }
 
-.header-link.current {
+.header__link.current {
     color: var(--accent-txt-color);
 
     &::after {
@@ -56,19 +56,19 @@
         }
 }
 
-.header-list {
+.header__list {
     margin-left: 93px;
     padding: 0px;
     list-style: none;
     display: flex;
     justify-content: center;
 
-    .header-item+.header-item {
+    .header__item + .header__item {
             margin-left: 50px;
         }
 }
 
-.header-nav {
+.header__nav {
     display: flex;
     justify-content: space-between;
 }

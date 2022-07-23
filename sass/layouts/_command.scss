@@ -1,9 +1,7 @@
+
+
 .command {
     background-color: var(--background);
-
-    &__person {
-            padding: 30px 0;
-        }
     
     &__title {
         font-weight: 700;
@@ -27,23 +25,6 @@
     border-radius: 0px 0px 4px 4px;
 
     background-color: var(--bcg-color);
-
-    .subtitle {
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 1.19;
-            text-transform: capitalize;
-            text-align: center;
-            color: var(--subtitle-txt);
-        }
-
-    .text {
-        margin-bottom: 16px;
-        font-size: 16px;
-        line-height: 1.19;
-        text-align: center;
-        color: var(--primary-txt-color);
-    }
 }
 
 .command__list {
@@ -52,7 +33,30 @@
     display: flex;
     gap: 30px;
 
-    .command-item+.command-item {
+    .command__item+.command__item {
             margin-right: 0;
         }
 }
+
+.command__person {
+    padding: 30px 0;
+
+.subtitle {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.19;
+        text-transform: capitalize;
+        text-align: center;
+        color: var(--subtitle-txt);
+    }
+
+    .text {
+        margin-bottom: 16px;
+        
+        font-size: 16px;
+        line-height: 1.19;
+        text-align: center;
+        color: var(--primary-txt-color);
+    }
+}
+

@@ -9,10 +9,11 @@
     text-transform: capitalize;
     text-decoration: none;
 
-    color: var(--logo-txt-color);
+    color: var(--bcg-color);
 
     .header & {
-            color: var(--bcg-color);
+            
+            color: var(--logo-txt-color);
         }
 
     &__cl {
