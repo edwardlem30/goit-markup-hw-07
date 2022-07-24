@@ -1,18 +1,22 @@
 /* посилання на соцмережі */
-.social-media-list {
+.social__media {
     display: flex;
     justify-content: center;
+    padding-left: 0;
+    margin: 0;
     gap: 10px;
+
+    list-style: none; 
 }
 
-.social-media-link {
+.social__media__link {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 44px;
     height: 44px;
     color: #AFB1B8;
-    /* background-color: #fff; */
+   
     border-radius: 50%;
 
     transition-property: color, background-color;
@@ -28,17 +32,16 @@
         }
 }
 
-.social-media-icon {
+.social__media__icon {
     fill: currentColor;
 }
 
-.social-media-icon-footer {
+.social__media__icon-footer {
     fill: #FFFFFF;
 
 }
 
-
-.social-media-link-visit {
+.social__media__link-visit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,7 +59,7 @@
 
 }
 
-.social-media-link-visit:hover,
-.social-media-link-visit:focus {
+.social__media__link-visit:hover,
+.social__media__link-visit:focus {
     background-color: var(--accent-txt-color);
 }

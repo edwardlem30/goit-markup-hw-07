@@ -1,5 +1,6 @@
 @import "./utils/vars";
 @import "./utils/vars";
+@import "./utils/animations";
 @import "./utils/decimals";
 @import "./utils/mixins";
 @import "./utils/fonts";
@@ -14,13 +15,16 @@
 @import "./components/section";
 @import "./components/form/modules";
 @import "./components/socials";
+@import "./components/placeholders";
 
 @import "./layouts/header";
 @import "./layouts/hero";
+@import "./layouts/backdrop";
 @import "./layouts/work";
 @import "./layouts/footer";
 @import "./layouts/command";
 @import "./layouts/clients";
+@import "./layouts/portfolio";
 
 
 
