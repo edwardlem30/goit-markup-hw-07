@@ -4,25 +4,41 @@
     background-color: var(--hero-bcg);
 
     .logo {
-            color: var(--bcg-color);
-}
+        color: var(--bcg-color);
+    }
 }
 
 .footer__flex {
-    display: flex;
-    align-items: baseline;
+    
+
+    @media screen and (max-width: 767px) {
+        
+        text-align: center;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        max-width: 768px;
+    }
+    @media screen and (min-width: 1200px) {
+        max-width: 1200px;
+        display: flex;
+        align-items: baseline;
+    }
 
     &__list {
-            padding: 0;
-        }
+        padding: 0;
+    }
 
-    &__list &__item + &__item {
+    &__list &__item+&__item {
         margin-top: 9px;
     }
 }
 
 .footer__flex__visit {
     margin-left: 70px;
+
+    @media screen and (max-width: 767px) {
+
+    }
 }
 
 .footer__flex__visit-join {
@@ -49,8 +65,8 @@
 
     &:hover,
     &:focus {
-         color: var(--accent-txt-color);
-        }
+        color: var(--accent-txt-color);
+    }
 }
 
 .link {
@@ -61,4 +77,3 @@
         color: var(--accent-txt-color);
     }
 }
-

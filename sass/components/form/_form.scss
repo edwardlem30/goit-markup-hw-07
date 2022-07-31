@@ -1,6 +1,9 @@
 .form {
     margin-left: auto;
 
+    @media screen and (max-width: 767px) {
+            margin-top: 60px;}
+
     &__write {
         display: block;
 
@@ -13,6 +16,11 @@
         text-transform: uppercase;
 
         color: #FFFFFF;
+
+        @media screen and (max-width: 767px) {
+                
+                text-align: center;
+            }
     }
 
     &__field {
@@ -20,7 +28,7 @@
         align-items: center;
         justify-content: left;
     }
-}
+
 
 
 .form__icon {
@@ -46,8 +54,24 @@
 
 
 .register {
-    display: flex;
-    align-items: center;
+    
+
+    @media screen and (max-width: 767px) {
+            
+        display: block;
+        justify-content: center;
+        
+        }
+
+        @media screen and (min-width: 768px) {
+            max-width: 768px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+        }
 }
 
 
@@ -78,6 +102,11 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+    @media screen and (max-width: 767px) {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
     &::placeholder {
             display: flex;
             align-items: center;
@@ -89,3 +118,4 @@
         }
 }
 
+}

@@ -16,23 +16,6 @@
   --indent: 30px;
 }
 
-:root {
-  --main-font: "Roboto", sans-serif;
-  --secondary-font: "Raleway", sans-serif;
-  --main-font-size: 14px;
-  --accent-txt-color: #2196F3;
-  --logo-txt-color: #000000;
-  --subtitle-txt: #212121;
-  --primary-txt-color: #757575;
-  --hero-bcg: #2F303A;
-  --background: #F5F4FA;
-  --bcg-color: #FFFFFF;
-  --animation-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  --backdrop-bgc: rgba(0, 0, 0, 0.2);
-  --items: 1;
-  --indent: 30px;
-}
-
 .animate__animated.animate__backInDown,
 .animate__animated.animate__infinit {
   --animate-duration: 2s;
@@ -492,8 +475,8 @@ li:nth-last-of-type(-n+2) {
 }
 .section__item {
   text-align: left;
-  -ms-flex-preferred-size: calc((100% - var(--indent) * var(--items)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+  -ms-flex-preferred-size: calc(100% - var(--indent) * (var(--items)) / var(--items));
+      flex-basis: calc(100% - var(--indent) * (var(--items)) / var(--items));
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .section__item {
@@ -605,6 +588,11 @@ li:nth-last-of-type(-n+2) {
 .form {
   margin-left: auto;
 }
+@media screen and (max-width: 767px) {
+  .form {
+    margin-top: 60px;
+  }
+}
 .form__write {
   display: block;
   margin-bottom: 20px;
@@ -613,6 +601,11 @@ li:nth-last-of-type(-n+2) {
   line-height: 1.14em;
   text-transform: uppercase;
   color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .form__write {
+    text-align: center;
+  }
 }
 .form__field {
   display: -webkit-box;
@@ -625,8 +618,7 @@ li:nth-last-of-type(-n+2) {
       -ms-flex-pack: left;
           justify-content: left;
 }
-
-.form__icon {
+.form .form__icon {
   position: absolute;
   top: 50%;
   left: 11px;
@@ -634,24 +626,38 @@ li:nth-last-of-type(-n+2) {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form__icon:hover, .form__icon:focus {
+.form .form__icon:hover, .form .form__icon:focus {
   fill: var(--accent-txt-color);
   cursor: pointer;
 }
-.backdrop-item:hover .form__icon, .bsckdrop-item:focus .form__icon {
+.backdrop-item:hover .form .form__icon, .bsckdrop-item:focus .form .form__icon {
   fill: var(--accent-txt-color);
 }
-
-.register {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (max-width: 767px) {
+  .form .register {
+    display: block;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
-
-.register__input {
+@media screen and (min-width: 768px) {
+  .form .register {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form .register {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.form .register__input {
   display: block;
   width: 358px;
   height: 50px;
@@ -674,7 +680,13 @@ li:nth-last-of-type(-n+2) {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.register__input::-webkit-input-placeholder {
+@media screen and (max-width: 767px) {
+  .form .register__input {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+.form .register__input::-webkit-input-placeholder {
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
@@ -683,14 +695,14 @@ li:nth-last-of-type(-n+2) {
   line-height: 1.25em;
   color: rgba(255, 255, 255, 0.6);
 }
-.register__input::-moz-placeholder {
+.form .register__input::-moz-placeholder {
   display: flex;
   align-items: center;
   font-size: 16px;
   line-height: 1.25em;
   color: rgba(255, 255, 255, 0.6);
 }
-.register__input:-ms-input-placeholder {
+.form .register__input:-ms-input-placeholder {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -699,7 +711,7 @@ li:nth-last-of-type(-n+2) {
   line-height: 1.25em;
   color: rgba(255, 255, 255, 0.6);
 }
-.register__input::-ms-input-placeholder {
+.form .register__input::-ms-input-placeholder {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -708,7 +720,7 @@ li:nth-last-of-type(-n+2) {
   line-height: 1.25em;
   color: rgba(255, 255, 255, 0.6);
 }
-.register__input::placeholder {
+.form .register__input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,7 +797,6 @@ textarea:hover, textarea:focus {
 }
 
 .footer-btn {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1065,6 +1076,11 @@ textarea:hover, textarea:focus {
   background-position: center;
   background-repeat: no-repeat;
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .hero {
+    max-width: 100%;
+  }
+}
 .hero__title {
   display: block;
   width: 696px;
@@ -1294,13 +1310,26 @@ textarea:hover, textarea:focus {
   color: var(--bcg-color);
 }
 
-.footer__flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (max-width: 767px) {
+  .footer__flex {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__flex {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__flex {
+    max-width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 .footer__flex__list {
   padding: 0;
@@ -1312,7 +1341,6 @@ textarea:hover, textarea:focus {
 .footer__flex__visit {
   margin-left: 70px;
 }
-
 .footer__flex__visit-join {
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -1450,8 +1478,8 @@ textarea:hover, textarea:focus {
   }
 }
 .clients__item {
-  -ms-flex-preferred-size: calc((100% - var(--indent) * var(--items)) / var(--items));
-      flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
+  -ms-flex-preferred-size: calc((100% - var(--indent) * (var(--items))) / var(--items));
+      flex-basis: calc((100% - var(--indent) * (var(--items))) / var(--items));
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .clients__item {
