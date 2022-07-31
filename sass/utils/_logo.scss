@@ -11,6 +11,11 @@
 
     color: var(--bcg-color);
 
+@media screen and (max-width: 767px) {
+
+        justify-content: center;
+    }
+
     .header & {
             
             color: var(--logo-txt-color);

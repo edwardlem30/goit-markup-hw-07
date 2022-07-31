@@ -24,20 +24,34 @@
         align-items: baseline;
     }
 
+   
     &__list {
         padding: 0;
+        
     }
 
     &__list &__item+&__item {
         margin-top: 9px;
     }
+    &__item .link {
+        @media screen and (max-width: 767px) {
+        
+                justify-content: center;
+            }
+    }
 }
 
 .footer__flex__visit {
-    margin-left: 70px;
+    
 
     @media screen and (max-width: 767px) {
-
+        margin-top: 60px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
     }
 }
 
@@ -62,6 +76,16 @@
 
 .link-map {
     @extend %link-map;
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
+        }
+    
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            text-align: center;
+        }
+    
+        
 
     &:hover,
     &:focus {

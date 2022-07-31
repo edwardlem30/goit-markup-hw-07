@@ -103,6 +103,13 @@
   text-decoration: none;
   color: var(--bcg-color);
 }
+@media screen and (max-width: 767px) {
+  .logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 .header .logo {
   color: var(--logo-txt-color);
 }
@@ -802,7 +809,6 @@ textarea:hover, textarea:focus {
   display: flex;
   border-radius: 4px;
   min-width: 200px;
-  margin-left: 12px;
   padding-top: 10px;
   padding-right: 32px;
   padding-bottom: 10px;
@@ -816,6 +822,23 @@ textarea:hover, textarea:focus {
   letter-spacing: 0.06em;
   background-color: var(--background);
   color: var(--subtitle-txt);
+}
+@media screen and (max-width: 767px) {
+  .footer-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-btn {
+    margin-left: 12px;
+  }
 }
 
 .footer-btn.primary {
@@ -1337,10 +1360,30 @@ textarea:hover, textarea:focus {
 .footer__flex__list .footer__flex__item + .footer__flex__item {
   margin-top: 9px;
 }
-
-.footer__flex__visit {
-  margin-left: 70px;
+@media screen and (max-width: 767px) {
+  .footer__flex__item .link {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
+
+@media screen and (max-width: 767px) {
+  .footer__flex__visit {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__flex__visit {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__flex__visit {
+    margin-left: 70px;
+  }
+}
+
 .footer__flex__visit-join {
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -1360,6 +1403,16 @@ textarea:hover, textarea:focus {
   height: 24px;
 }
 
+@media screen and (max-width: 767px) {
+  .link-map {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .link-map {
+    text-align: center;
+  }
+}
 .link-map:hover, .link-map:focus {
   color: var(--accent-txt-color);
 }
