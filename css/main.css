@@ -425,9 +425,24 @@ textarea::placeholder {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 .container .card__list {
   margin-top: 50px;
@@ -449,8 +464,14 @@ li:nth-last-of-type(-n+2) {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .section__title {
   font-weight: 700;
@@ -462,7 +483,12 @@ li:nth-last-of-type(-n+2) {
 .section__item {
   display: block;
   text-align: left;
-  max-width: 270px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .section__item {
+    max-width: 270px;
+  }
 }
 .section__item:not(:first-child) {
   margin-left: 30px;
@@ -474,16 +500,34 @@ li:nth-last-of-type(-n+2) {
 .section__list {
   padding: 0px;
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
+}
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .section__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .section__list {
+    margin-top: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .section__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 94px;
+  }
 }
 .section__list .section__item + .section__item {
   margin-right: 0;
@@ -1132,7 +1176,12 @@ textarea:hover, textarea:focus {
 }
 
 .work {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .work {
+    padding-bottom: 94px;
+  }
 }
 .work__title {
   font-weight: 700;
@@ -1297,7 +1346,14 @@ textarea:hover, textarea:focus {
 }
 
 .clients {
-  padding: 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 .clients__title {
   font-weight: 700;

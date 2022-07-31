@@ -1,6 +1,11 @@
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+        
+        @media screen and (min-width: 1200px) {
+            padding-top: 94px;
+            padding-bottom: 94px;
+        }
 
     &__title {
         font-weight: 700;
@@ -13,7 +18,15 @@
     &__item {
         display: block;
         text-align: left;
-        max-width: 270px;
+        width: 100%;
+
+            @media screen and (min-width: 320px) and (max-width: 767px) {}
+        
+            @media screen and (min-width: 768px) {}
+        
+            @media screen and (min-width: 1200px) {
+                max-width: 270px;
+            }
         }
 
     &__item:not(:first-child) {
@@ -28,10 +41,25 @@
 .section__list {
     padding: 0px;
     list-style: none;
-    display: flex;
-    justify-content: flex-start;
+    
+    
     align-items: center;
     gap: 30px;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+            justify-content: center;
+            margin-top: 60px;
+        }
+    
+        @media screen and (min-width: 768px) {
+            margin-top: 60px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 94px;
+        }
 
 .section__item+.section__item {
         margin-right: 0;
